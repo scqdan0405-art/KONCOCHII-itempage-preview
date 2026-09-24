@@ -1,0 +1,3 @@
+.test-preview-banner{position:relative;z-index:1000;background:#8b1e2d;color:#fff;text-align:center;font:700 13px/1.4 Arial,sans-serif;letter-spacing:.08em;padding:8px 12px}
+.test-preview-form-note{margin:14px 0;padding:12px 14px;background:#fff3cd;border:1px solid #e0bd5a;color:#5b4300;font-weight:700}
+.test-preview-disabled{opacity:.6;cursor:not-allowed!important}
