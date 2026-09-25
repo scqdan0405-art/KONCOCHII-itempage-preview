@@ -14,14 +14,17 @@
         button.classList.add("test-preview-disabled");
       });
 
+      if (!form.querySelector(".test-preview-form-note")) {
       var note = document.createElement("p");
       note.className = "test-preview-form-note";
       note.textContent = "テスト環境のため、このフォームから送信できません";
       form.insertBefore(note, form.firstChild);
+      }
       form.addEventListener("submit", function (event) {
         event.preventDefault();
+        event.stopImmediatePropagation();
         return false;
-      });
+      }, true);
     });
   }
 

@@ -188,7 +188,7 @@
         <p data-field="contact.lead"></p>
         <div class="contact-lines" id="contactLines"></div>
       </div>
-      <form class="contact-form" id="contactForm" action="#" method="get">
+      <form class="contact-form" id="contactForm" action="#" method="get" onsubmit="return false" data-preview-disabled="true"><p class="test-preview-form-note" role="status">テスト環境のため、このフォームから送信できません</p>
         <input type="hidden" name="lang" id="formLang" value="ja">
         <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off">
         <label>
@@ -207,7 +207,7 @@
           <span data-field="contact.form.message"></span>
           <textarea name="message" rows="6" required></textarea>
         </label>
-        <button class="btn form-btn" type="submit" data-field="contact.form.button"></button>
+        <button class="test-preview-disabled btn form-btn" type="submit" data-field="contact.form.button" disabled aria-disabled="true"></button>
         <p class="form-note" data-field="contact.form.note"></p>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
