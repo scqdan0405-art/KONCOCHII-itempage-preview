@@ -6664,6 +6664,18 @@ body.test .kc-fit-mini__button:hover,body.test .kc-fit-mini__button:focus-visibl
 #kc-fit-modal #kc-fit .cta a.primary{background:#E6412A!important;color:white!important}
 #kc-fit-modal #kc-fit .cta a.secondary{border-color:#E6412A!important;color:#B73725!important}
 </style>
+
+<!-- KC-T3-20261110-3FIXES: three approved visual corrections only -->
+<style>
+/* Remove the five red decorative bullets in the Makuake checklist. */
+body.test #makuake .method-check-list li::before{content:none!important;display:none!important}
+/* Separate the compact invitation from the checklist above it. */
+body.test #makuake .makuake-content .kc-fit-mini{margin-top:30px!important}
+/* Keep each modal question above its choices and clear of the fieldset border. */
+#kc-fit-modal #kc-fit fieldset{display:flow-root!important}
+#kc-fit-modal #kc-fit fieldset legend{display:block!important;float:left!important;clear:both!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;margin:0 0 13px!important;padding:0!important;line-height:1.55!important;background:transparent!important}
+#kc-fit-modal #kc-fit fieldset label:first-of-type{clear:both!important}
+</style>
 </head>
 <body class="test refined enhanced with-pattern">
 <a class="skip-link" href="#main">Chuyển đến nội dung</a>
