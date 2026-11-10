@@ -6600,31 +6600,21 @@ html body .header-nav a.header-zalo-cta:focus-visible{outline:3px solid #173C83;
 @media(max-width:600px){#kc-fit{width:calc(100% - 24px);margin:28px auto 40px;padding:22px 16px;border-radius:18px}#kc-fit fieldset{padding:16px 14px}#kc-fit .cta a{width:100%;text-align:center}}
 </style>
 
-<!-- T3 design review: modal and teaser styles; original LP CSS and diagnosis logic preserved -->
+<!-- T3 design review: compact inline box and modal; original LP CSS, fonts and diagnosis logic preserved -->
 <style>
-/* Teaser only: no global element styles. */
-.kc-fit-teaser{position:relative;width:100%;padding:clamp(36px,5vw,76px) 0;background:linear-gradient(180deg,#faf8f3 0%,#f4f4ed 100%);isolation:isolate}
-.kc-fit-teaser__shell{width:min(1180px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.72fr);align-items:stretch;border:1px solid #d8dfd8;border-radius:26px;overflow:hidden;background:#f9f7f2;box-shadow:0 18px 55px rgba(24,56,49,.06)}
-.kc-fit-teaser__copy{padding:clamp(28px,4.5vw,66px);position:relative}
-.kc-fit-teaser__kicker{display:flex;align-items:center;gap:12px;letter-spacing:.14em;font-weight:800;font-size:12px;color:#087f78;margin:0 0 21px}
-.kc-fit-teaser__kicker-mark{display:block;width:29px;height:3px;background:#f04b32;border-radius:99px;flex:0 0 auto}
-.kc-fit-teaser h2{font-size:clamp(27px,3.1vw,43px);font-weight:800;line-height:1.35;letter-spacing:-.03em;color:#183b35;margin:0 0 17px;max-width:640px;font-family:inherit}
-.kc-fit-teaser__description{font-size:clamp(14px,1.26vw,16px);line-height:1.85;color:#4e5a56;margin:0;max-width:580px}
-.kc-fit-teaser__action-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:27px}
-.kc-fit-teaser__button{display:inline-flex;align-items:center;justify-content:center;gap:19px;border:0!important;border-radius:999px!important;padding:15px 25px!important;background:#087f78!important;color:#fff!important;font-size:15px!important;font-weight:800!important;line-height:1.2!important;font-family:inherit;cursor:pointer;box-shadow:0 7px 18px rgba(8,127,120,.15);transition:transform .2s,box-shadow .2s}
-.kc-fit-teaser__button:hover,.kc-fit-teaser__button:focus-visible{transform:translateY(-2px);box-shadow:0 10px 20px rgba(8,127,120,.23)}
-.kc-fit-teaser__button span{font-size:19px;font-weight:500}
-.kc-fit-teaser__support{font-size:12px;color:#68716d}
-.kc-fit-teaser__visual{padding:clamp(26px,3.5vw,46px);display:flex;flex-direction:column;justify-content:center;background:#e9f1eb;border-left:1px solid #d6e0d7;min-width:0}
-.kc-fit-teaser__visual-caption{display:flex;justify-content:space-between;gap:18px;align-items:center;color:#54766c;font-size:10px;font-weight:800;letter-spacing:.13em;margin-bottom:18px}
-.kc-fit-teaser__visual-caption span{color:#be503e;font-weight:750}
-.kc-fit-teaser__visual-step{display:flex;gap:16px;align-items:center;padding:16px 0;border-top:1px solid rgba(8,127,120,.19);color:#23443d;font-size:14px}
-.kc-fit-teaser__visual-step>span{font-size:12px;color:#a35747;letter-spacing:.03em;font-weight:750}
-.kc-fit-teaser__visual-step strong{font-weight:750}
-.kc-fit-teaser__visual-step i{display:block;width:6px;height:6px;border:1.5px solid #6fa29a;border-radius:50%;margin-left:auto}
-.kc-fit-teaser__visual-step i.kc-fit-teaser__visual-tick{background:#f04b32;border:0}
-@media(max-width:820px){.kc-fit-teaser__shell{grid-template-columns:1fr}.kc-fit-teaser__visual{border-left:0;border-top:1px solid #d6e0d7;padding:18px 29px}.kc-fit-teaser__visual-caption{margin-bottom:7px}.kc-fit-teaser__visual-step{display:inline-flex;vertical-align:middle;margin:0 14px 0 0;padding:10px 0;border:0}.kc-fit-teaser__visual-step i{display:none}}
-@media(max-width:480px){.kc-fit-teaser{padding:26px 0}.kc-fit-teaser__shell{width:calc(100% - 24px);border-radius:20px}.kc-fit-teaser__copy{padding:27px 23px 30px}.kc-fit-teaser h2{font-size:25px}.kc-fit-teaser__kicker{font-size:10px;letter-spacing:.1em}.kc-fit-teaser__action-row{margin-top:23px;gap:12px}.kc-fit-teaser__button{width:100%}.kc-fit-teaser__visual{padding:15px 23px}.kc-fit-teaser__visual-step{font-size:12px;margin-right:8px;gap:8px}.kc-fit-teaser__visual-step>span{font-size:11px}}
+
+/* Small in-column assessment prompt; inherits approved test-sales fonts. */
+body.test .makuake-content .kc-fit-mini{display:block!important;margin:15px 0 18px!important;padding:13px 17px!important;border:1px solid #E7D7C9!important;border-left:4px solid #E6412A!important;border-radius:8px!important;background:#FCF8F2!important;box-shadow:none!important;max-width:100%!important;font-family:inherit!important}
+body.test .kc-fit-mini *{box-sizing:border-box!important}
+body.test .kc-fit-mini__label{display:block!important;font-size:11px!important;line-height:1.2!important;font-weight:800!important;letter-spacing:.06em!important;color:#CC3724!important;margin:0 0 7px!important}
+body.test .kc-fit-mini__main{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:14px!important}
+body.test .kc-fit-mini__copy{flex:1!important;min-width:0!important}
+body.test .kc-fit-mini__copy strong{display:block!important;font-size:16px!important;line-height:1.45!important;color:#2B323C!important;font-weight:800!important;margin:0 0 4px!important}
+body.test .kc-fit-mini__copy span{display:block!important;font-size:12px!important;line-height:1.6!important;color:#555B65!important;font-weight:400!important}
+body.test .kc-fit-mini__button{flex:0 0 auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;border:1px solid #E6412A!important;border-radius:6px!important;background:#E6412A!important;color:white!important;padding:11px 13px!important;min-height:40px!important;font-family:inherit!important;font-weight:800!important;font-size:13px!important;line-height:1.3!important;white-space:nowrap!important;cursor:pointer!important;box-shadow:none!important;transform:none!important}
+body.test .kc-fit-mini__button:hover,body.test .kc-fit-mini__button:focus-visible{background:#B83521!important;border-color:#B83521!important}
+@media(max-width:650px){body.test .kc-fit-mini__main{align-items:flex-start!important;flex-direction:column!important;gap:11px!important}body.test .kc-fit-mini__copy strong{font-size:15px!important}body.test .makuake-content .kc-fit-mini{padding:14px!important}}
+
 /* Dialog only */
 #kc-fit-modal[hidden]{display:none!important}
 #kc-fit-modal{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;padding:clamp(8px,2.5vw,24px);font-family:"Be Vietnam Pro",sans-serif}
@@ -6656,10 +6646,23 @@ html body .header-nav a.header-zalo-cta:focus-visible{outline:3px solid #173C83;
 #kc-fit-modal #kc-fit .cta a.secondary{border-color:#087f78!important;color:#087f78!important}
 #kc-fit-modal #kc-fit .result .small{color:#5f6b65!important}
 @media(max-width:600px){#kc-fit-modal{padding:0}#kc-fit-modal .kc-fit-modal__dialog{width:100%;height:100dvh;max-height:100dvh;border-radius:0}#kc-fit-modal .kc-fit-modal__header{padding:12px 16px}#kc-fit-modal #kc-fit{padding:25px 16px 45px!important}#kc-fit-modal #kc-fit fieldset{padding:14px 13px!important}#kc-fit-modal #kc-fit-form label{padding:11px 8px!important}#kc-fit-modal #kc-fit-submit{width:100%}}
-@media(prefers-reduced-motion:reduce){.kc-fit-teaser__button{transition:none}}
+
 #kc-fit-modal .kc-fit-modal__progress{font-size:11px;font-weight:700;color:#63716b;white-space:nowrap;margin-left:auto}
 #kc-fit-modal .kc-fit-modal__progress--done{color:#087f78}
 @media(max-width:480px){#kc-fit-modal .kc-fit-modal__identity{gap:7px;flex-wrap:wrap}#kc-fit-modal .kc-fit-modal__progress{font-size:10px;margin-left:0}}
+
+
+/* Test-sales accent colors, confined to the modal. */
+#kc-fit-modal{font-family:inherit!important}
+#kc-fit-modal .kc-fit-modal__brand,#kc-fit-modal .kc-fit-modal__progress--done{color:#CC3724!important}
+#kc-fit-modal #kc-fit{--accent:#E6412A!important;--accent-weak:#FFF2E9!important;--fg:#20242C!important}
+#kc-fit-modal #kc-fit input[type=radio]{accent-color:#E6412A!important}
+#kc-fit-modal #kc-fit-submit{background:#E6412A!important;color:white!important}
+#kc-fit-modal #kc-fit-form label:has(input:checked){background:#FFF0E9!important;color:#9E3021!important}
+#kc-fit-modal #kc-fit-result .result{border-color:#E6412A!important;background:#FFF6EF!important}
+#kc-fit-modal #kc-fit .result h3{color:#26313A!important}
+#kc-fit-modal #kc-fit .cta a.primary{background:#E6412A!important;color:white!important}
+#kc-fit-modal #kc-fit .cta a.secondary{border-color:#E6412A!important;color:#B73725!important}
 </style>
 </head>
 <body class="test refined enhanced with-pattern">
@@ -6769,25 +6772,6 @@ html body .header-nav a.header-zalo-cta:focus-visible{outline:3px solid #173C83;
 </div>
 </section>
 <!-- T3 diagnosis: sample questions/results/disclaimers preserved verbatim -->
-<section class="kc-fit-teaser" id="kc-fit-teaser" aria-labelledby="kc-fit-teaser-title">
- <div class="kc-fit-teaser__shell">
-  <div class="kc-fit-teaser__copy">
-   <p class="kc-fit-teaser__kicker"><span class="kc-fit-teaser__kicker-mark" aria-hidden="true"></span> KIỂM TRA TRƯỚC KHI BÁN THỬ</p>
-   <h2 id="kc-fit-teaser-title">Sản phẩm của bạn đã sẵn sàng để bán thử tại Nhật chưa?</h2>
-   <p class="kc-fit-teaser__description">6 câu hỏi · khoảng 1 phút. Kết quả hiện ngay, không cần để lại thông tin liên hệ.</p>
-   <div class="kc-fit-teaser__action-row">
-    <button type="button" id="kc-fit-open" class="kc-fit-teaser__button" aria-haspopup="dialog" aria-controls="kc-fit-modal">Bắt đầu kiểm tra <span aria-hidden="true">↗</span></button>
-    <span class="kc-fit-teaser__support">Không cần để lại thông tin liên hệ</span>
-   </div>
-  </div>
-  <div class="kc-fit-teaser__visual" aria-hidden="true">
-   <div class="kc-fit-teaser__visual-caption">KIỂM TRA NHANH <span>01 — 03</span></div>
-   <div class="kc-fit-teaser__visual-step"><span>01</span><strong>6 câu hỏi</strong><i></i></div>
-   <div class="kc-fit-teaser__visual-step"><span>02</span><strong>Khoảng 1 phút</strong><i></i></div>
-   <div class="kc-fit-teaser__visual-step"><span>03</span><strong>Kết quả hiện ngay</strong><i class="kc-fit-teaser__visual-tick"></i></div>
-  </div>
- </div>
-</section>
 <div id="kc-fit-modal" class="kc-fit-modal" hidden aria-hidden="true">
  <div class="kc-fit-modal__shade" data-kc-fit-close="true" aria-hidden="true"></div>
  <div class="kc-fit-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="kc-fit-title" tabindex="-1">
@@ -6979,6 +6963,16 @@ html body .header-nav a.header-zalo-cta:focus-visible{outline:3px solid #173C83;
 <li>Giá &amp; cách truyền đạt</li>
 <li>Sản xuất, giao hàng, chăm sóc người mua</li>
 </ul>
+</div>
+<div class="kc-fit-mini" id="kc-fit-teaser" aria-label="Kiểm tra nhanh trước khi bán thử">
+  <div class="kc-fit-mini__label">KIỂM TRA TẠI ĐÂY!</div>
+  <div class="kc-fit-mini__main">
+    <div class="kc-fit-mini__copy">
+      <strong>Sản phẩm đã sẵn sàng bán thử tại Nhật?</strong>
+      <span>6 câu hỏi · khoảng 1 phút · Có kết quả ngay, không cần để lại thông tin liên hệ.</span>
+    </div>
+    <button type="button" class="kc-fit-mini__button" id="kc-fit-open" aria-haspopup="dialog" aria-controls="kc-fit-modal">Kiểm tra ngay <span aria-hidden="true">↗</span></button>
+  </div>
 </div>
 <p class="method-note-inline">Không phải mọi sản phẩm đều có thể bán thử nguyên trạng. Chúng tôi sẽ xác nhận sản phẩm và điều kiện; nếu khó thực hiện trên Makuake, sẽ cân nhắc phương án khác.</p>
 <a class="method-official" href="https://www.makuake.com/" rel="noopener noreferrer" target="_blank">Xem website chính thức của Makuake ↗</a>
@@ -7781,14 +7775,5 @@ html body.test #makuake .makuake-focus{overflow-wrap:anywhere!important;white-sp
  });
 })();
 </script>
-<script>
-/* Public design preview only: never submit contact forms. */
-document.addEventListener("submit", function(e){
- if(e.target && e.target.matches && e.target.matches("form.lp-contact-form")) {
-  e.preventDefault();
-  alert("Đây là trang xem trước. Biểu mẫu liên hệ không gửi dữ liệu.");
- }
-}, true);
-</script>
-</body>
+<script>document.addEventListener("submit",function(e){if(e.target&&e.target.matches&&e.target.matches("form.lp-contact-form")){e.preventDefault();alert("Đây là trang xem trước. Biểu mẫu liên hệ không gửi dữ liệu.");}},true);</script></body>
 </html>
